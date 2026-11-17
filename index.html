@@ -1,53 +1,212 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="2 Loons Pickup is getting ready to haul furniture and junk in the St. Paul area. Call or email us about your pickup.">
-<title>2 Loons Pickup | Furniture &amp; Junk Removal</title>
-<link rel="icon" href="loon.svg" type="image/svg+xml">
-<style>
-:root{color-scheme:light;--ink:#191f1c;--paper:#fffaf0;--sand:#f0e7d5;--red:#a53830;--line:#c7bba4}
-*{box-sizing:border-box}
-body{margin:0;min-height:100svh;display:grid;place-items:center;background:#eae1d0;color:var(--ink);font:1rem/1.5 system-ui,sans-serif}
-main{width:min(calc(100% - 3rem),70rem);margin:2rem 0;background:var(--paper);border:1px solid var(--line);border-top:5px solid var(--red);display:grid;grid-template-columns:42% 1fr;box-shadow:0 14px 46px #38260f19}
-.art{display:grid;place-items:center;background:var(--sand);padding:2rem}
-.art img{display:block;width:min(100%,23rem);height:auto}
-.content{padding:clamp(1.75rem,5vw,4.5rem)}
-.area{margin:0 0 .85rem;color:var(--red);font-weight:750;font-size:.875rem}
-h1{font-family:"Arial Black",system-ui,sans-serif;font-size:clamp(2.8rem,6.4vw,6rem);letter-spacing:-.075em;font-weight:950;line-height:.88;margin:0}
-.service{margin:1rem 0 0;font-size:clamp(1.05rem,2.25vw,1.38rem);font-weight:700}
-.intro{max-width:34ch;margin:1.2rem 0 1.55rem}
-.contacts{display:grid;gap:.65rem;border-top:1px solid var(--line);padding-top:1.1rem;width:fit-content;max-width:100%}
-.contacts a{font-weight:725;min-height:44px;display:flex;align-items:center;padding:.5rem .85rem;border:1px solid var(--ink);border-radius:4px;color:var(--ink);text-decoration:none;overflow-wrap:anywhere}
-.contacts a:first-child{background:var(--ink);color:var(--paper)}
-.contacts a:hover{text-decoration:underline;text-underline-offset:4px}
-.contacts a:focus-visible{outline:3px solid var(--red);outline-offset:3px}
-.contacts p{margin:-.43rem 0 .1rem;font-size:.875rem}
-@media(max-width:680px){
-main{width:min(calc(100% - 2rem),28rem);margin:1rem 0;grid-template-columns:1fr}
-.art{padding:.5rem .75rem}.art img{width:9rem}
-.content{padding:1.15rem}
-h1{font-size:clamp(2.55rem,10vw,3.4rem)}
-.area{margin-bottom:.45rem}.service{margin-top:.65rem}.intro{margin:.65rem 0 .9rem}
-.contacts{padding-top:.75rem}
-}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, interactive-widget=resizes-content">
+  <meta name="description" content="Furniture and junk pickup around St. Paul. Ask Devin and Jonathan for a quote and check your ZIP.">
+  <title>2 Loons Pickup | Furniture and junk pickup around St. Paul</title>
+  <link rel="icon" href="./assets/couch-01.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./panels.css">
+  <link rel="stylesheet" href="./portraits.css">
+  <link rel="stylesheet" href="./quote.css">
+  <script defer src="./panels.js"></script>
+  <script defer src="./portraits.js"></script>
+  <script defer src="./quote.js"></script>
 </head>
 <body>
-<main>
-  <div class="art"><img src="loon.svg" width="320" height="288" alt="Two haulers carry a couch inside the shape of a loon’s head"></div>
-  <div class="content">
-    <p class="area">Coming soon in the St. Paul area</p>
-    <h1>2 LOONS<br>PICKUP</h1>
-    <p class="service">Furniture &amp; junk removal</p>
-    <p class="intro">Have an old couch, garage clutter, or a small cleanout? Tell us what needs to go, your zip code, and when you’d like it picked up.</p>
-    <div class="contacts">
-      <a href="tel:+16514324870">Call 651-432-4870</a>
-      <p>Enter 6077 when prompted.</p>
-      <a href="mailto:helpme@2loonspickup.com">helpme@2loonspickup.com</a>
+  <header class="site-header">
+    <a class="brand" href="#crew" data-goto="0">
+      <img src="./assets/couch-01.svg" alt="">
+      2LoonsPickup.com
+    </a>
+    <div class="header-actions">
+      <div>
+        <a class="call-link" href="tel:+16514324870" aria-describedby="call-extension">Call 651-432-4870</a>
+        <span class="call-tip" id="call-extension">Enter 6077</span>
+      </div>
+      <button class="ticket" type="button" data-quote>
+        Get a quote
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg>
+      </button>
     </div>
+  </header>
+
+  <main class="rail" tabindex="0" aria-label="Browse the five 2 Loons Pickup sections">
+    <section class="panel hero active" id="crew" aria-labelledby="crew-title">
+      <div class="inside">
+        <div class="copy">
+          <h1 id="crew-title">That couch <span>can go.</span></h1>
+          <p>Furniture and junk pickup around St. Paul. Tell Devin and Jonathan what needs to go and where it is.</p>
+          <div class="ctas">
+            <button class="ticket" type="button" data-quote>
+              Request a quote
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg>
+            </button>
+            <button class="ticket" type="button" data-goto="1">
+              What we pick up
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="portraits">
+          <figure class="portrait">
+            <img src="./assets/devin.webp" alt="Illustrated portrait of Devin in round glasses and a green work jacket">
+            <figcaption>Devin</figcaption>
+          </figure>
+          <figure class="portrait">
+            <img src="./assets/jonathan.webp" alt="Illustrated portrait of Jonathan in a red work shirt">
+            <figcaption>Jonathan</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel light services" id="services" aria-labelledby="services-title" aria-hidden="true" inert>
+      <div class="inside">
+        <div class="copy">
+          <h2 id="services-title">What needs <span class="accent">to go?</span></h2>
+          <ul>
+            <li><strong>Furniture carryouts</strong><span>Couches, chairs and dressers.</span></li>
+            <li><strong>Small cleanouts</strong><span>Garage corners and move-out leftovers.</span></li>
+            <li><strong>Ask before we load</strong><span>Mattresses, fridges, TVs or tires. Some items may cost extra.</span></li>
+          </ul>
+          <div class="ctas">
+            <button class="ticket dark" type="button" data-goto="2">
+              How pickup works
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg>
+            </button>
+          </div>
+        </div>
+        <figure class="art service-art" role="img" aria-label="Illustration of a couch, chair, and moving box"></figure>
+      </div>
+    </section>
+
+    <section class="panel steps" id="process" aria-labelledby="steps-title" tabindex="0" aria-hidden="true" inert>
+      <div class="inside">
+        <h2 id="steps-title">How pickup works</h2>
+        <figure class="art process-art" role="img" aria-label="Illustrations of a phone photo, a clipboard, and the crew carrying a couch"></figure>
+        <ol>
+          <li><h3>1. Show us the load</h3><p>Send photos and your ZIP.</p></li>
+          <li><h3>2. We check the details</h3><p>Tell us about stairs or a long carry.</p></li>
+          <li><h3>3. Confirm pickup</h3><p>We agree on the price and time.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="panel light area" id="area" aria-labelledby="area-title" aria-hidden="true" inert>
+      <div class="inside">
+        <div class="copy">
+          <h2 id="area-title">Starting around <span class="accent">St. Paul</span></h2>
+          <ul class="towns">
+            <li>St. Paul</li>
+            <li>West St. Paul</li>
+            <li>South St. Paul</li>
+            <li>Inver Grove Heights</li>
+          </ul>
+          <p>Check your ZIP when you ask for a quote.</p>
+          <div class="ctas">
+            <button class="ticket dark" type="button" data-quote>
+              Ask about your ZIP
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg>
+            </button>
+          </div>
+        </div>
+        <figure class="art area-art" role="img" aria-label="Illustration of a pickup truck on a leafy residential street"></figure>
+      </div>
+    </section>
+
+    <section class="panel quote" id="quote" aria-labelledby="quote-title" aria-hidden="true" inert>
+      <div class="inside">
+        <div class="copy">
+          <h2 id="quote-title">Let’s get <span>it out.</span></h2>
+          <ul>
+            <li>Take a photo of the whole load.</li>
+            <li>Mention stairs or a long carry.</li>
+            <li>Tell us which day works.</li>
+          </ul>
+          <div class="ctas">
+            <button class="ticket" type="button" data-quote>
+              Open the quote form
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg>
+            </button>
+            <a class="call2" href="tel:+16514324870" aria-describedby="quote-call-extension">Call 651-432-4870</a>
+          </div>
+          <p class="call-tip" id="quote-call-extension">Enter 6077 when prompted.</p>
+        </div>
+        <figure class="art quote-art" role="img" aria-label="Illustration of a mustard couch and stacked moving boxes"></figure>
+      </div>
+    </section>
+  </main>
+
+  <nav class="pager" aria-label="Website sections">
+    <button class="arrow prev" type="button" aria-label="Previous section" disabled>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H5m6-6-6 6 6 6"/></svg>
+    </button>
+    <div class="panel-buttons">
+      <button class="panel-button" type="button" data-goto="0" aria-current="step"><b aria-hidden="true">01</b>Crew</button>
+      <button class="panel-button" type="button" data-goto="1"><b aria-hidden="true">02</b>Pickups</button>
+      <button class="panel-button" type="button" data-goto="2"><b aria-hidden="true">03</b>How it works</button>
+      <button class="panel-button" type="button" data-goto="3"><b aria-hidden="true">04</b>Area</button>
+      <button class="panel-button" type="button" data-goto="4"><b aria-hidden="true">05</b>Quote</button>
+    </div>
+    <button class="arrow next" type="button" aria-label="Next section">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg>
+    </button>
+    <span class="pager-count" aria-live="polite">Section 1 of 5</span>
+  </nav>
+
+  <dialog id="quote-drawer" aria-labelledby="drawer-title">
+  <div class="quote-drawer-content">
+    <div class="quote-drawer-header">
+      <h2 id="drawer-title">Pickup quote</h2>
+      <button class="quote-close" type="button" aria-label="Close quote form" autofocus>
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="m6 6 12 12M18 6 6 18"/>
+        </svg>
+      </button>
+    </div>
+    <p>Tell the crew what needs to go and how they’ll get to it.</p>
+    <form method="dialog">
+      <button type="submit" hidden>Open email draft</button>
+      <div class="quote-fields">
+        <label>
+          Pickup ZIP
+          <input name="zip" inputmode="numeric" autocomplete="postal-code" pattern="[0-9]{5}" title="Enter a five-digit ZIP" placeholder="55118" required>
+        </label>
+        <label>
+          Preferred day (optional)
+          <input name="day" placeholder="Saturday">
+        </label>
+      </div>
+      <label>
+        What needs to go?
+        <textarea name="items" placeholder="One couch and a chair" required></textarea>
+      </label>
+      <label>
+        Access or stairs (optional)
+        <input name="access" placeholder="One flight, parking out front">
+      </label>
+      <div class="quote-actions">
+        <a class="ticket dark quote-email" href="mailto:helpme@2loonspickup.com">
+          Open email draft
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M4 12h16m-7-7 7 7-7 7"/>
+          </svg>
+        </a>
+        <button class="quote-copy" type="button">Copy request details</button>
+      </div>
+      <p class="quote-help">Attach photos in your mail app before you send the request. If your draft doesn’t open, copy the details into an email to <span class="quote-inbox">helpme@2loonspickup.com</span>.</p>
+      <p class="quote-help quote-status" role="status"></p>
+      <label class="quote-manual" hidden>
+        Request details to copy
+        <textarea readonly rows="4"></textarea>
+      </label>
+      <div class="quote-call">
+        <a href="tel:+16514324870">Call 651-432-4870</a>
+        <span>Enter 6077 when prompted.</span>
+      </div>
+    </form>
   </div>
-</main>
+</dialog>
 </body>
 </html>

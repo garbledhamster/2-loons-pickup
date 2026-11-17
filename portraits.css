@@ -1,0 +1,107 @@
+#crew .portraits {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 15px 9px 20px;
+  min-width: 0;
+  position: relative;
+  pointer-events: none;
+}
+
+#crew .portraits::before {
+  content: "";
+  position: absolute;
+  inset: 12% 6%;
+  border: 1px solid #e4d7b257;
+  transform: rotate(-6deg);
+}
+
+#crew .portrait {
+  --portrait-tilt: -5deg;
+  --portrait-shift: -9px;
+  background: var(--sand);
+  color: var(--ink);
+  padding: 7px 7px 0;
+  position: relative;
+  box-shadow: 0 14px 28px #08130d55;
+  transform: rotate(var(--portrait-tilt)) translateY(var(--portrait-shift));
+}
+
+#crew .portrait:nth-child(2) {
+  --portrait-tilt: 5deg;
+  --portrait-shift: 9px;
+}
+
+#crew .portrait img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 4.6;
+  object-fit: cover;
+}
+
+#crew .portrait figcaption {
+  font: 800 clamp(25px, 4vw, 55px)/1 Barlow, "Arial Narrow", sans-serif;
+  text-transform: uppercase;
+  padding: 4px 5px 7px;
+}
+
+@media (max-width: 720px) {
+  #crew .portraits {
+    max-width: 410px;
+    width: 100%;
+    justify-self: center;
+    padding: 10px 9px 8px;
+  }
+
+  #crew .portrait {
+    padding: 5px 5px 0;
+  }
+
+  #crew .portrait img {
+    aspect-ratio: 1.18;
+  }
+
+  #crew .portrait figcaption {
+    font-size: 30px;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  #crew .portrait {
+    --portrait-travel: min(205px, 32vw);
+    --portrait-away-x: calc(-1 * var(--portrait-travel));
+    --portrait-away-y: -35px;
+    --portrait-away-angle: -13deg;
+    --portrait-entry-delay: 0ms;
+    --portrait-exit-delay: 0ms;
+    translate: 0 0;
+    rotate: 0deg;
+  }
+
+  #crew .portrait:nth-child(2) {
+    --portrait-away-x: var(--portrait-travel);
+    --portrait-away-y: 40px;
+    --portrait-away-angle: 13deg;
+    --portrait-entry-delay: 62ms;
+    --portrait-exit-delay: 20ms;
+  }
+
+  #crew:is([data-portrait-state="start"], [data-portrait-state="away"]) .portrait {
+    translate: var(--portrait-away-x) var(--portrait-away-y);
+    rotate: var(--portrait-away-angle);
+  }
+
+  #crew[data-portrait-state="rest"] .portrait {
+    transition-property: translate, rotate;
+    transition-duration: 630ms;
+    transition-timing-function: cubic-bezier(.16, 1.2, .3, 1);
+    transition-delay: var(--portrait-entry-delay);
+  }
+
+  #crew[data-portrait-state="away"] .portrait {
+    transition-property: translate, rotate;
+    transition-duration: 400ms;
+    transition-timing-function: cubic-bezier(.4, 0, 1, 1);
+    transition-delay: var(--portrait-exit-delay);
+  }
+}

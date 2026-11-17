@@ -1,0 +1,189 @@
+#quote-drawer {
+  box-sizing: border-box;
+  position: fixed;
+  inset: 0 0 0 auto;
+  width: min(570px, 100%);
+  max-width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  max-height: 100dvh;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  overscroll-behavior: contain;
+  border: 0;
+  background: var(--cream);
+  color: var(--ink);
+  box-shadow: -14px 0 50px #10180e5e;
+}
+
+#quote-drawer[open] {
+  animation: quote-drawer-in .28s cubic-bezier(.17, .8, .32, 1) both;
+}
+
+#quote-drawer::backdrop {
+  background: #111b16a8;
+}
+
+@keyframes quote-drawer-in {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+#quote-drawer :focus-visible {
+  outline: 3px solid var(--rust);
+  outline-offset: 3px;
+}
+
+.quote-drawer-content {
+  padding: 32px clamp(21px, 4.2vw, 43px) 40px;
+}
+
+.quote-drawer-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+#quote-drawer h2 {
+  margin: 0;
+  font: 800 clamp(56px, 8vw, 76px)/.91 Barlow, "Arial Narrow", sans-serif;
+  letter-spacing: -.025em;
+  text-transform: uppercase;
+}
+
+.quote-close {
+  display: grid;
+  flex: none;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  padding: 0;
+  border: 1px solid var(--ink);
+  background: none;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.quote-close svg,
+.quote-email svg {
+  width: 20px;
+  height: 20px;
+  flex: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+}
+
+.quote-drawer-content > p {
+  margin: 10px 0 0;
+}
+
+#quote-drawer form {
+  display: grid;
+  gap: 13px;
+  margin: 21px 0 0;
+}
+
+#quote-drawer label {
+  display: grid;
+  gap: 5px;
+  min-width: 0;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+#quote-drawer input,
+#quote-drawer textarea {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  padding: 9px 10px;
+  border: 1px solid #9f937b;
+  border-radius: 0;
+  background: #fff9ea;
+  color: var(--ink);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+#quote-drawer textarea {
+  min-height: 82px;
+  resize: vertical;
+}
+
+.quote-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  align-items: end;
+}
+
+.quote-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 16px;
+}
+
+.quote-copy {
+  min-height: 44px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--rust);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  cursor: pointer;
+}
+
+.quote-help {
+  margin: 0;
+  color: #4d5244;
+  font-size: 14px;
+}
+
+.quote-inbox {
+  overflow-wrap: anywhere;
+  font-weight: 700;
+}
+
+.quote-status {
+  font-weight: 700;
+}
+
+.quote-status:empty {
+  position: absolute;
+}
+
+#quote-drawer .quote-manual[hidden] {
+  display: none;
+}
+
+.quote-call {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 9px;
+  padding-top: 9px;
+  border-top: 1px solid var(--line, #c4b698);
+}
+
+.quote-call a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--rust);
+  font-weight: 700;
+}
+
+.quote-call span {
+  font-size: 13px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #quote-drawer[open] { animation: none; }
+}
