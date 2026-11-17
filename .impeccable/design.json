@@ -1,0 +1,331 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-17T17:31:45.623360+00:00",
+  "title": "Design System: 2 Loons Pickup",
+  "extensions": {
+    "colorMeta": {
+      "night": {
+        "role": "primary",
+        "displayName": "Pine night",
+        "canonical": "#19271f",
+        "tonalRamp": [
+          "oklch(15% 0.0244 159.04)",
+          "oklch(26% 0.0244 159.04)",
+          "oklch(38% 0.0244 159.04)",
+          "oklch(49% 0.0244 159.04)",
+          "oklch(61% 0.0244 159.04)",
+          "oklch(72% 0.0244 159.04)",
+          "oklch(84% 0.0244 159.04)",
+          "oklch(95% 0.0244 159.04)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#1a251d",
+        "tonalRamp": [
+          "oklch(15% 0.0216 153.11)",
+          "oklch(26% 0.0216 153.11)",
+          "oklch(38% 0.0216 153.11)",
+          "oklch(49% 0.0216 153.11)",
+          "oklch(61% 0.0216 153.11)",
+          "oklch(72% 0.0216 153.11)",
+          "oklch(84% 0.0216 153.11)",
+          "oklch(95% 0.0216 153.11)"
+        ]
+      },
+      "cream": {
+        "role": "neutral",
+        "displayName": "Cream",
+        "canonical": "#fbf2df",
+        "tonalRamp": [
+          "oklch(15% 0.0268 85.66)",
+          "oklch(26% 0.0268 85.66)",
+          "oklch(38% 0.0268 85.66)",
+          "oklch(49% 0.0268 85.66)",
+          "oklch(61% 0.0268 85.66)",
+          "oklch(72% 0.0268 85.66)",
+          "oklch(84% 0.0268 85.66)",
+          "oklch(95% 0.0268 85.66)"
+        ]
+      },
+      "sand": {
+        "role": "neutral",
+        "displayName": "Sand",
+        "canonical": "#eee0c4",
+        "tonalRamp": [
+          "oklch(15% 0.0401 84.58)",
+          "oklch(26% 0.0401 84.58)",
+          "oklch(38% 0.0401 84.58)",
+          "oklch(49% 0.0401 84.58)",
+          "oklch(61% 0.0401 84.58)",
+          "oklch(72% 0.0401 84.58)",
+          "oklch(84% 0.0401 84.58)",
+          "oklch(95% 0.0401 84.58)"
+        ]
+      },
+      "gold": {
+        "role": "primary",
+        "displayName": "Warm gold",
+        "canonical": "#f3bf6a",
+        "tonalRamp": [
+          "oklch(15% 0.1190 78.24)",
+          "oklch(26% 0.1190 78.24)",
+          "oklch(38% 0.1190 78.24)",
+          "oklch(49% 0.1190 78.24)",
+          "oklch(61% 0.1190 78.24)",
+          "oklch(72% 0.1190 78.24)",
+          "oklch(84% 0.1190 78.24)",
+          "oklch(95% 0.1190 78.24)"
+        ]
+      },
+      "rust": {
+        "role": "secondary",
+        "displayName": "Rust",
+        "canonical": "#8f3428",
+        "tonalRamp": [
+          "oklch(15% 0.1260 30.19)",
+          "oklch(26% 0.1260 30.19)",
+          "oklch(38% 0.1260 30.19)",
+          "oklch(49% 0.1260 30.19)",
+          "oklch(61% 0.1260 30.19)",
+          "oklch(72% 0.1260 30.19)",
+          "oklch(84% 0.1260 30.19)",
+          "oklch(95% 0.1260 30.19)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Line",
+        "canonical": "#c4b698",
+        "tonalRamp": [
+          "oklch(15% 0.0439 85.94)",
+          "oklch(26% 0.0439 85.94)",
+          "oklch(38% 0.0439 85.94)",
+          "oklch(49% 0.0439 85.94)",
+          "oklch(61% 0.0439 85.94)",
+          "oklch(72% 0.0439 85.94)",
+          "oklch(84% 0.0439 85.94)",
+          "oklch(95% 0.0439 85.94)"
+        ]
+      },
+      "services-line": {
+        "role": "neutral",
+        "displayName": "Services line",
+        "canonical": "#b4a587",
+        "tonalRamp": [
+          "oklch(15% 0.0450 84.51)",
+          "oklch(26% 0.0450 84.51)",
+          "oklch(38% 0.0450 84.51)",
+          "oklch(49% 0.0450 84.51)",
+          "oklch(61% 0.0450 84.51)",
+          "oklch(72% 0.0450 84.51)",
+          "oklch(84% 0.0450 84.51)",
+          "oklch(95% 0.0450 84.51)"
+        ]
+      },
+      "outline": {
+        "role": "secondary",
+        "displayName": "Burnt outline",
+        "canonical": "#b95a38",
+        "tonalRamp": [
+          "oklch(15% 0.1321 39.86)",
+          "oklch(26% 0.1321 39.86)",
+          "oklch(38% 0.1321 39.86)",
+          "oklch(49% 0.1321 39.86)",
+          "oklch(61% 0.1321 39.86)",
+          "oklch(72% 0.1321 39.86)",
+          "oklch(84% 0.1321 39.86)",
+          "oklch(95% 0.1321 39.86)"
+        ]
+      },
+      "field": {
+        "role": "neutral",
+        "displayName": "Field",
+        "canonical": "#fff9ea",
+        "tonalRamp": [
+          "oklch(15% 0.0207 88.72)",
+          "oklch(26% 0.0207 88.72)",
+          "oklch(38% 0.0207 88.72)",
+          "oklch(49% 0.0207 88.72)",
+          "oklch(61% 0.0207 88.72)",
+          "oklch(72% 0.0207 88.72)",
+          "oklch(84% 0.0207 88.72)",
+          "oklch(95% 0.0207 88.72)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display-home": {
+        "displayName": "Homepage display",
+        "purpose": "Homepage panel headings; responsive overrides remain in panels.css."
+      },
+      "display-services": {
+        "displayName": "Services display",
+        "purpose": "Services h1, capped at 6rem."
+      },
+      "headline-services": {
+        "displayName": "Services chapter heading",
+        "purpose": "Services h2 headings."
+      },
+      "body-home": {
+        "displayName": "Homepage body",
+        "purpose": "Homepage baseline."
+      },
+      "body-services": {
+        "displayName": "Services body",
+        "purpose": "Services baseline."
+      },
+      "label": {
+        "displayName": "Quote label",
+        "purpose": "Shared drawer field labels."
+      }
+    },
+    "shadows": [
+      {
+        "name": "homepage-ticket",
+        "value": "2px 2px 0 #111a13",
+        "purpose": "Homepage tickets at rest."
+      },
+      {
+        "name": "homepage-ticket-pressed",
+        "value": "1px 1px 0 #111a13",
+        "purpose": "Homepage tickets while pressed."
+      },
+      {
+        "name": "crew-portrait",
+        "value": "0 14px 28px #08130d55",
+        "purpose": "Tilted homepage crew portraits."
+      },
+      {
+        "name": "quote-drawer",
+        "value": "-14px 0 50px #10180e5e",
+        "purpose": "Shared right-edge quote dialog."
+      }
+    ],
+    "motion": [
+      {
+        "name": "portrait-entry",
+        "value": "630ms cubic-bezier(.16, 1.2, .3, 1)",
+        "purpose": "Homepage portrait entry; second portrait delays 62ms. Only without reduced motion."
+      },
+      {
+        "name": "portrait-exit",
+        "value": "400ms cubic-bezier(.4, 0, 1, 1)",
+        "purpose": "Homepage portrait exit; second portrait delays 20ms. Only without reduced motion."
+      },
+      {
+        "name": "drawer-entry",
+        "value": ".28s cubic-bezier(.17, .8, .32, 1)",
+        "purpose": "Right-to-left drawer entry. Removed for reduced motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "home-medium",
+        "value": "950px"
+      },
+      {
+        "name": "stacked",
+        "value": "720px"
+      },
+      {
+        "name": "home-small",
+        "value": "370px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Homepage gold ticket",
+      "kind": "button",
+      "description": "Homepage primary action with its hard offset shadow.",
+      "html": "<button class=\"ds-ticket\">Request a quote <span aria-hidden=\"true\">\u2192</span></button>",
+      "css": ".ds-ticket{font-family:DM,Arial,sans-serif;display:inline-flex;align-items:center;justify-content:space-between;gap:17px;min-height:46px;padding:0 15px;border:1px solid var(--ink,#1a251d);border-radius:0;background:var(--gold,#f3bf6a);color:var(--ink,#1a251d);font-weight:700;box-shadow:2px 2px 0 #111a13;cursor:pointer}.ds-ticket:hover{background:#ffce81}.ds-ticket:focus-visible{outline:3px solid #f1be69;outline-offset:4px}.ds-ticket:active{transform:translate(1px,1px);box-shadow:1px 1px 0 #111a13}@media(prefers-reduced-motion:reduce){.ds-ticket:active{transform:none}}",
+      "refersTo": "ticket-home"
+    },
+    {
+      "name": "Homepage rust ticket",
+      "kind": "button",
+      "description": "Rust action on the homepage\u2019s light surfaces.",
+      "html": "<button class=\"ds-rust\">See all services</button>",
+      "css": ".ds-rust{font-family:DM,Arial,sans-serif;min-height:46px;padding:0 15px;border:1px solid var(--rust,#8f3428);border-radius:0;background:var(--rust,#8f3428);color:var(--cream,#fbf2df);font-weight:700;box-shadow:2px 2px 0 #111a13;cursor:pointer}.ds-rust:hover{background:#73271f}.ds-rust:focus-visible{outline:3px solid var(--rust,#8f3428);outline-offset:4px;}.ds-rust:active{transform:translate(1px,1px);box-shadow:1px 1px 0 #111a13}@media(prefers-reduced-motion:reduce){.ds-rust:active{transform:none}}",
+      "refersTo": "ticket-home-dark"
+    },
+    {
+      "name": "Services quote button",
+      "kind": "button",
+      "description": "Flat gold action used on the Services page.",
+      "html": "<button class=\"ds-services-btn\">Request a quote</button>",
+      "css": ".ds-services-btn{font:700 1rem/1.4 DM,Arial,sans-serif;display:inline-flex;align-items:center;justify-content:center;min-height:2.75rem;padding:.5rem 1rem;border:1px solid transparent;border-radius:0;background:var(--gold,#f3bf6a);color:var(--ink,#19271f);cursor:pointer}.ds-services-btn:hover{background:#ffcd80;border-color:currentColor}.ds-services-btn:focus-visible{outline:3px solid var(--rust,#8f3428);outline-offset:4px;}@media(max-width:720px){.ds-services-btn{padding:.4rem .5rem}}",
+      "refersTo": "button-services"
+    },
+    {
+      "name": "Services drawer email ticket",
+      "kind": "button",
+      "description": "Services instance of the shared drawer\u2019s email action.",
+      "html": "<a class=\"ds-email\" href=\"mailto:helpme@2loonspickup.com\">Open email draft <span aria-hidden=\"true\">\u2192</span></a>",
+      "css": ".ds-email{font-family:DM,Arial,sans-serif;display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:48px;padding:12px 18px;border:1px solid var(--ink,#19271f);background:var(--ink,#19271f);color:var(--cream,#fbf2df);font-weight:700;text-decoration:none}.ds-email:focus-visible{outline:3px solid var(--rust,#8f3428);outline-offset:3px}",
+      "refersTo": "quote-email-services"
+    },
+    {
+      "name": "Quote field",
+      "kind": "input",
+      "description": "Native field with a visible label and rust focus outline.",
+      "html": "<label class=\"ds-label\">Pickup ZIP<input class=\"ds-field\" inputmode=\"numeric\" placeholder=\"55118\" pattern=\"[0-9]{5}\" required></label>",
+      "css": ".ds-label{font-family:DM,Arial,sans-serif;display:grid;gap:5px;min-width:0;color:var(--ink,#1a251d);font-size:14px;font-weight:700}.ds-field{font-family:DM,Arial,sans-serif;width:100%;min-width:0;min-height:44px;padding:9px 10px;border:1px solid #9f937b;border-radius:0;background:#fff9ea;color:var(--ink,#1a251d);font-size:16px;font-weight:400}.ds-field:focus-visible{outline:3px solid var(--rust,#8f3428);outline-offset:3px}",
+      "refersTo": "quote-field"
+    },
+    {
+      "name": "Homepage panel navigation",
+      "kind": "nav",
+      "description": "Current panel uses a gold fill; the other labels remain on pine.",
+      "html": "<nav class=\"ds-pager\" aria-label=\"Website sections\"><button class=\"ds-panel\" aria-current=\"step\">Crew</button><button class=\"ds-panel\">Pickups</button><button class=\"ds-panel\">How it works</button></nav>",
+      "css": ".ds-pager{display:flex;gap:7px;padding:12px;background:var(--night,#19271f)}.ds-panel{font-family:DM,Arial,sans-serif;border:1px solid transparent;background:transparent;color:#eee1c9;min-height:40px;padding:0 10px;font-size:13px;font-weight:700;white-space:nowrap;cursor:pointer}.ds-panel[aria-current=step]{border-color:var(--gold,#f3bf6a);background:var(--gold,#f3bf6a);color:var(--ink,#1a251d)}.ds-panel:focus-visible{outline:3px solid #f1be69;outline-offset:4px}"
+    },
+    {
+      "name": "Service tag",
+      "kind": "chip",
+      "description": "Static item example, with no selected or hover state.",
+      "html": "<span class=\"ds-tag\">Chairs and recliners</span>",
+      "css": ".ds-tag{font-family:DM,Arial,sans-serif;display:inline-block;border:1px solid var(--line,#b4a587);padding:.24rem .53rem;font-size:.91rem;background:var(--paper,#fbf2df);color:var(--ink,#19271f)}"
+    },
+    {
+      "name": "Services callout",
+      "kind": "card",
+      "description": "Compact practical note within a Services chapter.",
+      "html": "<aside class=\"ds-callout\"><strong>Ask first</strong><p>Mattresses and box springs, TVs, fridges and other appliances.</p></aside>",
+      "css": ".ds-callout{font-family:DM,Arial,sans-serif;border:1px solid var(--line,#b4a587);padding:.8rem .95rem;background:var(--paper,#fbf2df);color:var(--ink,#19271f)}.ds-callout p{font-size:.94rem;margin:.35rem 0 0;line-height:1.5}"
+    },
+    {
+      "name": "Native FAQ disclosure",
+      "kind": "custom",
+      "description": "Native details and summary with row dividers and visible focus.",
+      "html": "<details class=\"ds-faq\"><summary>Do you pick up in my ZIP code?</summary><p>Include your five-digit pickup ZIP in the quote request so we can check the location and schedule.</p></details>",
+      "css": ".ds-faq{font-family:DM,Arial,sans-serif;border-top:1px solid var(--line,#b4a587);border-bottom:1px solid var(--line,#b4a587);color:var(--ink,#19271f);background:var(--paper,#fbf2df);line-height:1.5}.ds-faq summary{cursor:pointer;font-weight:700;padding:.85rem 1.5rem .85rem 0;min-height:48px;line-height:1.4}.ds-faq summary:focus-visible{outline:3px solid #b95a38;outline-offset:5px}.ds-faq p{margin:0;padding:0 0 1rem;font-size:.96rem}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Approved illustrated pickup world",
+    "overview": "Use the approved pine, cream, gold and rust palette with condensed headings, square controls and grainy generated illustrations of Devin and Jonathan. The crew portraits and service scenes give this small pickup site its character. This record describes the implemented design; no separate visual-world cards or new identity workshop were created.",
+    "keyCharacteristics": [
+      "Condensed uppercase display type with readable DM Sans body copy.",
+      "Thin borders, paper-colored surfaces and small offset button shadows on the homepage.",
+      "Varied illustration crops and tilted crew artwork.",
+      "Five horizontal homepage panels, a vertical Services page and a shared quote drawer."
+    ],
+    "rules": [],
+    "dos": [
+      "Do keep the approved crew avatars and illustrated service examples.",
+      "Do vary image crops to suit the scene and available space.",
+      "Do preserve the separate homepage and Services layout models.",
+      "Do keep quote fields readable at phone sizes and preserve visible keyboard focus."
+    ],
+    "donts": [
+      "Don\u2019t apply the homepage\u2019s horizontal rail to the Services page.",
+      "Don\u2019t replace the square controls with rounded pills.",
+      "Don\u2019t present generated illustrations as photographs of completed jobs.",
+      "Don\u2019t turn the static service tags into filters without a product requirement."
+    ]
+  }
+}

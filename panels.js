@@ -126,6 +126,14 @@
     moveTo(destinations[event.key]);
   });
 
+  function followHash() {
+    const index = panels.findIndex(panel => `#${panel.id}` === location.hash);
+    if (index !== -1) moveTo(index, 'instant');
+  }
+  window.addEventListener('hashchange', followHash);
+  window.addEventListener('pageshow', followHash);
+  followHash();
+
   window.addEventListener('resize', () => moveTo(activeIndex, 'instant'));
   reducedMotion.addEventListener('change', () => {
     if (reducedMotion.matches) moveTo(activeIndex, 'instant');
