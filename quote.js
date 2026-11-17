@@ -14,20 +14,33 @@
   const manualText = manual.querySelector('textarea');
   let opener;
 
+  function openDrawer(button) {
+    if (drawer.open) return;
+    opener = button;
+    drawer.showModal();
+    drawer.scrollTop = 0;
+  }
+
   document.querySelectorAll('[data-quote]').forEach((button) => {
     button.setAttribute('aria-haspopup', 'dialog');
     button.setAttribute('aria-controls', drawer.id);
     button.addEventListener('click', (event) => {
       event.preventDefault();
-      if (drawer.open) return;
-      opener = button;
-      drawer.showModal();
-      drawer.scrollTop = 0;
+      openDrawer(button);
     });
   });
 
   close.addEventListener('click', () => drawer.close());
   drawer.addEventListener('close', () => opener?.focus({ preventScroll: true }));
+
+  function followQuoteLink() {
+    if (location.hash !== '#quote') return;
+    const button = document.querySelector('.panel.active [data-quote]')
+      || document.querySelector('[data-quote]');
+    openDrawer(button);
+  }
+  window.addEventListener('hashchange', followQuoteLink);
+  followQuoteLink();
 
   drawer.addEventListener('keydown', (event) => {
     if (event.key !== 'Tab') return;

@@ -20,6 +20,8 @@ The five-panel homepage covers the crew, pickups, process, area and quote. A sep
 
 Quote requests prepare an email to helpme@2loonspickup.com in the customer's mail app. Customers attach photos there and send it themselves. Copying request details provides another way to prepare the email. The phone is 651-432-4870, with 6077 entered when prompted.
 
+The direct contact link https://2loonspickup.com/#quote opens the quote drawer on arrival. Closing it returns focus to the visible quote action. An ordinary homepage visit keeps the drawer closed.
+
 ## Capabilities and Constraints
 
 The site is plain HTML, CSS and JavaScript hosted from the main branch root on GitHub Pages at https://2loonspickup.com/. Preserve CNAME, .nojekyll, the mail flow and existing contact details.
