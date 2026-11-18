@@ -133,7 +133,7 @@ Portrait entry and exit motion applies only when reduced motion is not requested
 
 ## Shapes
 
-Keep controls, fields, tags, cards and the drawer square. Use thin single-pixel dividers and borders. The circular homepage brand badge is a local exception. On the homepage, the two crew portraits rest at opposing (5deg) tilts with vertical offsets. The couch and stairs cutouts extend past opposite outer edges. In Other Jobs, the garage cutout sits high on the right, Jonathan and his box sit on the left, and the dresser sits lower on the right beneath its heading. Use the transparent outline to guide text flow, with restrained overhang at the inside seams.
+Keep controls, fields, tags, cards and the drawer square. Use thin single-pixel dividers and borders. The circular homepage brand badge is a local exception. On the homepage, the two crew portraits rest at opposing (5deg) tilts with vertical offsets. Furniture and stairs pair the cutouts with separate, aligned text columns. The garage cutout sits over a sand circle on the right, and Jonathan and his box sit in front of a gold star on the left. The larger dresser illustration crosses from the Curbside Loads card into the right-hand side of Pickup Day. On phones, give the illustration room above the pickup instructions.
 
 ## Components
 
@@ -149,7 +149,7 @@ The homepage uses previous/next arrow buttons and labeled panel buttons. Gold fi
 
 ### Tags and containers
 
-Service callouts use cream or sand, a thin border and compact copy. Crew and objects reach beyond the edge with a soft shadow. A native CSS shape around each cutout keeps copy alongside the silhouette. A warm gold section groups the pickup-day instructions.
+Service callouts use cream or sand, a thin border and compact copy. Crew and objects reach beyond the edge with a soft shadow. Keep the text column’s left edge aligned from the heading through its body copy. The furniture note uses a thin divider and spans the full card at narrow phone widths. The gold Pickup Day section reserves space for the dresser scene and its instructions.
 
 ### FAQ disclosure
 

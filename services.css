@@ -45,11 +45,11 @@
 
 .guide-card {
   --card-padding: clamp(14px, 2.2vw, 24px);
-  --cutout-width: min(43%, 220px);
-  --cutout-overhang: 10px;
-  --cutout-lift: 12px;
-  --cutout-edge: calc(0px - var(--card-padding) - var(--cutout-overhang));
-  display: flow-root;
+  --art-track: min(38%, 190px);
+  display: grid;
+  grid-template-columns: minmax(0, var(--art-track)) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(12px, 2vw, 20px);
   min-width: 0;
   padding: var(--card-padding);
   border: 1px solid var(--guide-line);
@@ -58,32 +58,68 @@
 }
 
 .guide-stairs {
-  --cutout-width: min(47%, 236px);
-  --cutout-lift: 8px;
+  --art-track: min(41%, 208px);
   background: var(--sand);
 }
 
-.guide-carryout { --cutout: url("./assets/cutout-carryout.webp"); }
-.guide-stairs { --cutout: url("./assets/cutout-stairs.webp"); }
-.guide-garage { --cutout: url("./assets/cutout-garage.webp"); }
-.guide-boxes { --cutout: url("./assets/cutout-boxes.webp"); }
-.guide-curbside { --cutout: url("./assets/cutout-curbside.webp"); }
+.guide-carryout {
+  row-gap: 10px;
+}
+
+.guide-carryout .guide-art {
+  grid-row: 1 / span 2;
+}
+
+.guide-carryout .guide-copy {
+  align-self: end;
+}
+
+.guide-stairs, .guide-garage {
+  grid-template-columns: minmax(0, 1fr) minmax(0, var(--art-track));
+}
+
+.guide-stairs .guide-art, .guide-garage .guide-art {
+  grid-area: 1 / 2;
+  margin-inline: 0 -10px;
+}
+
+.guide-stairs .guide-copy, .guide-garage .guide-copy {
+  grid-area: 1 / 1;
+}
+
+.guide-art {
+  position: relative;
+  isolation: isolate;
+  margin: -10px 0 -5px -10px;
+}
+
+.guide-art-circle::before, .guide-art-star::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 8% -5% 4%;
+  background: var(--sand);
+}
+
+.guide-art-circle::before {
+  border-radius: 50%;
+  inset: 10% -2% 4% 0;
+}
+
+.guide-art-star::before {
+  background: var(--gold);
+  clip-path: polygon(50% 0%, 63% 32%, 98% 25%, 78% 55%, 100% 80%, 65% 76%, 50% 100%, 35% 76%, 0% 80%, 22% 55%, 2% 25%, 37% 32%);
+}
 
 .guide-cutout {
-  float: right;
-  width: var(--cutout-width);
+  display: block;
+  width: 100%;
   height: auto;
-  margin-block: calc(0px - var(--card-padding) - var(--cutout-lift)) 4px;
-  margin-inline: 4px var(--cutout-edge);
-  shape-outside: var(--cutout);
-  shape-image-threshold: .22;
-  shape-margin: 9px;
   filter: drop-shadow(2px 8px 6px #33231045);
 }
 
-.guide-carryout .guide-cutout, .guide-boxes .guide-cutout {
-  float: left;
-  margin-inline: var(--cutout-edge) 4px;
+.guide-copy {
+  min-width: 0;
 }
 
 .guide-card h3, .guide-card h4, .guide-section h3, .guide-section h4 {
@@ -100,8 +136,16 @@
   margin-top: 9px;
 }
 
-.guide-card-note {
-  clear: both;
+.guide-card p {
+  text-wrap: pretty;
+}
+
+.guide-card .guide-card-note {
+  grid-column: 2;
+  align-self: start;
+  margin-top: 0;
+  padding-top: 8px;
+  border-top: 1px solid var(--guide-line);
 }
 
 .guide-card a {
@@ -121,6 +165,19 @@
   line-height: 1.5;
 }
 
+.guide-service-story {
+  --dresser-width: clamp(164px, 23vw, 288px);
+  --dresser-spill: calc(var(--dresser-width) * .66);
+  --story-gap: clamp(14px, 2vw, 24px);
+  position: relative;
+  isolation: isolate;
+}
+
+.guide-jobs {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
 .guide-job-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: start;
@@ -128,27 +185,31 @@
 }
 
 .guide-job-grid .guide-card {
-  --cutout-width: min(43%, 132px);
-  --cutout-overhang: 5px;
-  --cutout-lift: 8px;
+  --art-track: min(34%, 112px);
 }
 
-.guide-job-grid .guide-boxes {
-  --cutout-width: min(40%, 116px);
-  --cutout-lift: 4px;
+.guide-curbside {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  align-self: stretch;
+  gap: 0;
 }
 
-.guide-job-grid .guide-curbside {
-  --cutout-width: min(44%, 126px);
-}
-
-.guide-curbside .guide-cutout {
-  margin-block: 0;
+.guide-curbside .guide-art {
+  z-index: 1;
+  width: var(--dresser-width);
+  margin-inline: auto -10px;
+  margin-block: auto calc(0px - var(--card-padding) - var(--story-gap) - var(--dresser-spill));
+  padding-top: 8px;
+  pointer-events: none;
 }
 
 .guide-day {
-  padding-inline: clamp(16px, 3vw, 32px);
-  margin-top: 24px;
+  --day-inset: clamp(16px, 3vw, 32px);
+  padding-inline: var(--day-inset) calc(var(--day-inset) + var(--dresser-width));
+  min-height: calc(var(--dresser-spill) + 24px);
+  margin-top: var(--story-gap);
   border: 1px solid var(--guide-line);
   background: color-mix(in srgb, var(--gold) 58%, var(--cream));
 }
@@ -231,16 +292,39 @@
     gap: 20px;
   }
 
-  .guide-cutout {
-    shape-margin: 8px;
+  .guide-service-story {
+    --dresser-width: clamp(172px, 48vw, 205px);
+  }
+}
+
+@media (max-width: 540px) {
+  .guide-day {
+    padding-inline: var(--day-inset);
+    padding-top: 0;
   }
 
-  .guide-job-grid .guide-card {
-    --cutout-width: min(43%, 116px);
-    --cutout-overhang: 7px;
+  .guide-day > h3 {
+    display: flex;
+    align-items: center;
+    max-width: calc(100% - var(--dresser-width) + 4px);
+    min-height: calc(var(--dresser-spill) + 16px);
   }
 
-  .guide-job-grid .guide-boxes {
-    --cutout-width: min(40%, 110px);
+  .guide-day-grid {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 370px) {
+  .guide-carryout {
+    --art-track: 32%;
+  }
+
+  .guide-carryout .guide-art {
+    grid-row: 1;
+  }
+
+  .guide-card .guide-card-note {
+    grid-column: 1 / -1;
   }
 }
