@@ -133,7 +133,7 @@ Portrait entry and exit motion applies only when reduced motion is not requested
 
 ## Shapes
 
-Keep controls, fields, tags, cards and the drawer square. Use thin single-pixel dividers and borders. The circular homepage brand badge is a local exception. On the homepage, the two crew portraits rest at opposing (5deg) tilts with vertical offsets; the service cutouts extend slightly above and to the right of their cards. Use the transparent outline to guide text flow.
+Keep controls, fields, tags, cards and the drawer square. Use thin single-pixel dividers and borders. The circular homepage brand badge is a local exception. On the homepage, the two crew portraits rest at opposing (5deg) tilts with vertical offsets. The couch and stairs cutouts extend past opposite outer edges. In Other Jobs, the garage cutout sits high on the right, Jonathan and his box sit on the left, and the dresser sits lower on the right beneath its heading. Use the transparent outline to guide text flow, with restrained overhang at the inside seams.
 
 ## Components
 

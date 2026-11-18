@@ -16,8 +16,8 @@
   grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
   align-items: end;
   gap: 16px clamp(24px, 5vw, 72px);
-  padding-bottom: 26px;
-  margin-bottom: clamp(25px, 4vw, 48px);
+  padding-bottom: 22px;
+  margin-bottom: clamp(24px, 3.5vw, 42px);
   border-bottom: 1px solid var(--guide-line);
 }
 
@@ -44,15 +44,22 @@
 }
 
 .guide-card {
+  --card-padding: clamp(14px, 2.2vw, 24px);
+  --cutout-width: min(43%, 220px);
+  --cutout-overhang: 10px;
+  --cutout-lift: 12px;
+  --cutout-edge: calc(0px - var(--card-padding) - var(--cutout-overhang));
   display: flow-root;
   min-width: 0;
-  padding: clamp(14px, 2.2vw, 24px);
+  padding: var(--card-padding);
   border: 1px solid var(--guide-line);
   background: var(--card-paper);
   line-height: 1.45;
 }
 
 .guide-stairs {
+  --cutout-width: min(47%, 236px);
+  --cutout-lift: 8px;
   background: var(--sand);
 }
 
@@ -64,13 +71,19 @@
 
 .guide-cutout {
   float: right;
-  width: min(49%, 246px);
+  width: var(--cutout-width);
   height: auto;
-  margin: -45px -39px 5px 0;
+  margin-block: calc(0px - var(--card-padding) - var(--cutout-lift)) 4px;
+  margin-inline: 4px var(--cutout-edge);
   shape-outside: var(--cutout);
   shape-image-threshold: .22;
-  shape-margin: 10px;
+  shape-margin: 9px;
   filter: drop-shadow(2px 8px 6px #33231045);
+}
+
+.guide-carryout .guide-cutout, .guide-boxes .guide-cutout {
+  float: left;
+  margin-inline: var(--cutout-edge) 4px;
 }
 
 .guide-card h3, .guide-card h4, .guide-section h3, .guide-section h4 {
@@ -85,6 +98,10 @@
 
 .guide-card p, .guide-card a {
   margin-top: 9px;
+}
+
+.guide-card-note {
+  clear: both;
 }
 
 .guide-card a {
@@ -106,11 +123,27 @@
 
 .guide-job-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  margin-top: 30px;
+  align-items: start;
+  margin-top: 24px;
 }
 
-.guide-job-grid .guide-cutout {
-  width: min(51%, 170px);
+.guide-job-grid .guide-card {
+  --cutout-width: min(43%, 132px);
+  --cutout-overhang: 5px;
+  --cutout-lift: 8px;
+}
+
+.guide-job-grid .guide-boxes {
+  --cutout-width: min(40%, 116px);
+  --cutout-lift: 4px;
+}
+
+.guide-job-grid .guide-curbside {
+  --cutout-width: min(44%, 126px);
+}
+
+.guide-curbside .guide-cutout {
+  margin-block: 0;
 }
 
 .guide-day {
@@ -192,7 +225,7 @@
   }
 
   .guide-card-grid {
-    gap: 26px;
+    gap: 22px;
   }
 
   .guide-day-grid {
@@ -201,13 +234,15 @@
   }
 
   .guide-cutout {
-    width: min(49%, 185px);
-    margin: -30px -21px 3px 0;
-    shape-margin: 7px;
+    shape-margin: 8px;
   }
 
-  .guide-job-grid .guide-cutout {
-    width: min(48%, 145px);
+  .guide-job-grid .guide-card {
+    --cutout-width: min(43%, 116px);
+    --cutout-overhang: 7px;
   }
 
+  .guide-job-grid .guide-boxes {
+    --cutout-width: min(40%, 110px);
+  }
 }
