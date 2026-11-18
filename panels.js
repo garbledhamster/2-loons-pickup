@@ -73,9 +73,11 @@
   }
 
   for (const control of document.querySelectorAll('[data-goto]')) {
+    const target = panels.findIndex(panel => panel.id === control.dataset.goto);
+    if (target === -1) continue;
     control.addEventListener('click', event => {
       event.preventDefault();
-      moveTo(Number(control.dataset.goto));
+      moveTo(target);
     });
   }
   previous.addEventListener('click', () => moveTo(activeIndex - 1));
@@ -127,9 +129,26 @@
   });
 
   function followHash() {
-    const index = panels.findIndex(panel => `#${panel.id}` === location.hash);
-    if (index !== -1) moveTo(index, 'instant');
+    const target = document.getElementById(location.hash.slice(1));
+    const index = panels.findIndex(panel => panel.contains(target));
+    if (index === -1) return;
+
+    moveTo(index, 'instant');
+    if (target === panels[index]) {
+      target.scrollTop = 0;
+    } else {
+      target.scrollIntoView({ block: 'start', inline: 'nearest', behavior: 'instant' });
+      target.focus({ preventScroll: true });
+    }
   }
+
+  rail.addEventListener('click', event => {
+    if (event.button || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+    const link = event.target.closest('a[href^="#"]');
+    if (link?.hash !== location.hash) return;
+    event.preventDefault();
+    followHash();
+  });
   window.addEventListener('hashchange', followHash);
   window.addEventListener('pageshow', followHash);
   followHash();

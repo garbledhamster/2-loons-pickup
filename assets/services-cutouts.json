@@ -1,0 +1,28 @@
+{
+  "tool": "Built-in ImageGen",
+  "images": [
+    {
+      "outputs": [
+        "cutout-carryout.webp",
+        "cutout-garage.webp",
+        "cutout-boxes.webp",
+        "cutout-curbside.webp"
+      ],
+      "references": [
+        "services-scenes.webp",
+        "devin.webp",
+        "jonathan.webp"
+      ],
+      "prompt": "Create production illustration artwork for the existing 2 Loons Pickup website, using the illustrated service sheet for action ideas and texture, and the two named portraits as exact character reference. The tall lean man with rounded glasses, tousled chestnut hair and dark forest-green work jacket is Devin. The sturdier man with curly dark hair and mustache and a rust-red work shirt is Jonathan. Keep their visual identities, semi-realistic Minnesota screen-printed graphic novel style, quiet paper texture and earthy mustard/green/rust palette. Produce one transparent PNG asset sheet, square with four independent silhouettes centered in four equally sized quadrants. Each vignette must fit entirely in its own 50% × 50% quadrant with empty transparent gutters, especially the middle axes, so it can be cropped separately. Large assets filling their allocated areas without touching the cell edges. Top left: both men carefully carrying a mustard loveseat together, sofa and men all visibly in contact, lightly diagonal composition. Top right: Devin picks up a charcoal green storage tote with both hands in a slight side view. Bottom left: Jonathan holds one closed kraft moving box against his waist. Bottom right: both crew members guide one small wooden dresser on a low hand truck, one cropped suggestion of a wheel but no truck itself. Keep heads, hands and object unclipped and body silhouettes complete, maintain weight and contact. True alpha transparency between, around and behind every element. No backgrounds, floor plane, scenery, rectangle, props other than the described items, type, UI, labels, borders or checkerboard pattern. Edge silhouettes are visibly clean over light cream and carry a little internal vintage ink grain. These are small product callout images, keep each visually readable."
+    },
+    {
+      "outputs": [
+        "cutout-stairs.webp"
+      ],
+      "references": [
+        "washer-stairs.webp"
+      ],
+      "prompt": "Edit the attached 2 Loons Pickup illustration to produce one clean transparent cutout. Preserve the original illustrated identity, positions, hands, green and rust colored shirts, front-load washer and the exactly visible continuous dark lifting support passing under the washer with the two shoulder harnesses clipped at their waist. Keep original credible interaction and geometry from source. Social graphic-novel texture is just as in source. Remove the room, wall art, all railing, stair background and backdrop. Retain only the two crew members, the washer, harness equipment, boots, and an unobtrusive cutout of a few nearby stair treads needed to show their positions. Keep the extreme edges clear, use transparent alpha all around the cutout, no rectangular platform or room background, no grid, no frame, no new straps or changed carry mechanics, no typography, no UI. This will overlap the edge of a small paper callout, so illusion of depth and clean silhouette is important."
+    }
+  ]
+}

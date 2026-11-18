@@ -16,7 +16,7 @@ People around St. Paul with furniture or small household cleanouts who need help
 
 ## Operating Context
 
-The five-panel homepage covers the crew, pickups, process, area and quote. A separate scrolling Services page shows illustrated examples, pickup-day preparation and FAQs. Its See all services entry lives on the Pickups panel. Both pages use the same quote drawer and return the visitor to the control that opened it.
+The homepage has six slides for the crew, pickups, Services & FAQs, process, area and quote. The Services & FAQs slide scrolls within the horizontal rail and contains illustrated callouts, pickup-day preparation and 23 FAQs. The Pickups slide links to it through See all services. Old Services and FAQ links lead to the matching spot on the homepage. The shared quote drawer returns the visitor to the control that opened it.
 
 Quote requests prepare an email to helpme@2loonspickup.com in the customer's mail app. Customers attach photos there and send it themselves. Copying request details provides another way to prepare the email. The phone is 651-432-4870, with 6077 entered when prompted.
 
@@ -34,6 +34,6 @@ Preserve the approved illustrated world and avatars of Devin and Jonathan, inclu
 
 ## Evidence on Hand
 
-The repository contains the approved avatar illustrations, scene sheet, revised washer image, local fonts and working quote drawer. New scene assets retain exact generation prompts in adjacent JSON sidecars. Illustrations are generated examples, not photographs of completed jobs. The Services FAQ copy uses the confirmed planning scope in the St. Paul Junk Removal Project Bible. No customer testimonials or completed-job results have been supplied for this page.
+The repository contains the approved avatar illustrations, the illustrated scene sheet and washer reference, five translucent-edge action cutouts, local fonts and the quote drawer. The image assets retain exact generation prompts in adjacent JSON records. The illustrations show service examples. The Services FAQ copy uses the confirmed planning scope in the St. Paul Junk Removal Project Bible.
 
-The release checks exercise the visitor path at 1440×900, 390×844 and 320×670, including native FAQs, quote validation, email draft encoding, copy, focus return and navigation back to Pickups. The existing homepage checks cover the five panels, wheel and touch navigation, portrait motion and quote behavior.
+The release checks exercise the visitor path at 1440×900, 390×844 and 320×670, including horizontal navigation, contained slide scrolling, FAQ and legacy links, quote validation, email draft encoding, copy, focus return and portrait motion.

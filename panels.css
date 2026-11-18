@@ -424,6 +424,10 @@ h1 span, .accent {
   opacity: .68;
 }
 
+.pager-label-short {
+  display: none;
+}
+
 .panel-button[aria-current=step] {
   border-color: var(--gold);
   background: var(--gold);
@@ -588,11 +592,15 @@ h1 span, .accent {
     height: 60px;
     gap: 6px;
     padding-inline: 9px;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
   }
 
   .arrow {
     width: 38px;
     height: 37px;
+    padding: 0;
+    flex: none;
   }
 
   .panel-buttons {
@@ -600,9 +608,17 @@ h1 span, .accent {
   }
 
   .panel-button {
-    padding: 0 5px;
+    padding: 0 4px;
     font-size: 11px;
     min-height: 34px;
+  }
+
+  .pager-label-wide {
+    display: none;
+  }
+
+  .pager-label-short {
+    display: inline;
   }
 }
 
@@ -626,7 +642,12 @@ h1 span, .accent {
   }
 
   .pager {
+    gap: 4px;
     padding-inline: 6px;
+  }
+
+  .arrow {
+    width: 32px;
   }
 }
 

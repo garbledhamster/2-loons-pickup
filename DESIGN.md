@@ -21,14 +21,19 @@ typography:
     letterSpacing: "-.025em"
   display-services:
     fontFamily: 'Barlow, "Arial Narrow", sans-serif'
-    fontSize: "clamp(4rem, 9vw, 6rem)"
+    fontSize: "clamp(50px, 7vw, 104px)"
     fontWeight: 800
     lineHeight: 0.95
   headline-services:
     fontFamily: 'Barlow, "Arial Narrow", sans-serif'
-    fontSize: "clamp(2rem, 4.3vw, 3.6rem)"
+    fontSize: "clamp(28px, 3.2vw, 44px)"
     fontWeight: 800
     lineHeight: 0.95
+  subhead-services:
+    fontFamily: 'Barlow, "Arial Narrow", sans-serif'
+    fontSize: "clamp(25px, 2.6vw, 32px)"
+    fontWeight: 800
+    lineHeight: 0.96
   body-home:
     fontFamily: "DM, Arial, sans-serif"
     fontSize: "16px"
@@ -46,8 +51,7 @@ rounded:
 spacing:
   home-edge: "clamp(25px, 5vw, 82px)"
   home-gap: "clamp(25px, 5vw, 83px)"
-  services-inline: "clamp(1.45rem, 4.4vw, 3rem)"
-  services-block: "clamp(2.25rem, 5vw, 4rem)"
+  services-block: "clamp(28px, 4.5vw, 52px)"
 components:
   ticket-home:
     backgroundColor: "{colors.gold}"
@@ -59,15 +63,6 @@ components:
     textColor: "{colors.cream}"
     rounded: "{rounded.square}"
     padding: "0 15px"
-  button-services:
-    backgroundColor: "{colors.gold}"
-    textColor: "{colors.night}"
-    rounded: "{rounded.square}"
-    padding: ".5rem 1rem"
-  quote-email-services:
-    backgroundColor: "{colors.night}"
-    textColor: "{colors.cream}"
-    padding: "12px 18px"
   quote-field:
     backgroundColor: "{colors.field}"
     textColor: "{colors.ink}"
@@ -88,45 +83,45 @@ Use the approved pine, cream, gold and rust palette with condensed headings, squ
 - Condensed uppercase display type with readable DM Sans body copy.
 - Thin borders, paper-colored surfaces and small offset button shadows on the homepage.
 - Varied illustration crops and tilted crew artwork.
-- Five horizontal homepage panels, a vertical Services page and a shared quote drawer.
+- Six horizontal homepage slides with a contained Services & FAQs guide and a shared quote drawer.
 
 ## Colors
 
-Use dark pine and warm paper for large surfaces, with gold and rust for emphasis and actions. Frontmatter records the source values; page-specific roles below preserve the existing differences.
+Use dark pine and warm paper for large surfaces, with gold and rust for emphasis and actions. Frontmatter records the source values; the roles below describe the site’s shared palette.
 
 ### Primary
 
-- **Pine night:** Homepage frame and dark panels; Services text, header, hero and closing quote section. Services uses this value for its local ink variable.
-- **Warm gold:** Homepage action tickets, active panel navigation and process panel; Services quote buttons and pickup-day chapter.
+- **Pine night:** Homepage frame, dark panels and the Services contact block.
+- **Warm gold:** Action tickets, active slide navigation and the process slide. Blend with cream for the pickup-day section.
 
 ### Secondary
 
-- **Rust:** Homepage dark tickets and light-surface focus; quote text actions and drawer focus on both pages. The Services email ticket uses pine instead.
+- **Rust:** Light-surface action tickets, Services heading accent and drawer focus.
 - **Burnt outline:** Services link and FAQ focus outlines.
 
 ### Neutral
 
-- **Cream:** Light panels, Services page and shared drawer.
-- **Ink:** Homepage light-panel text and ticket borders; shared drawer text resolves to each page’s local ink value.
-- **Sand:** Crew portrait frames, homepage brand badge and Services hero frame.
-- **Line / Services line:** Thin dividers and borders; retain the distinct page values.
+- **Cream:** Light slides, including Services & FAQs, and the quote drawer.
+- **Ink:** Light-slide text, ticket borders and drawer text.
+- **Sand:** Crew portrait frames, homepage brand badge and the stairs card.
+- **Line / Services line:** Thin dividers and borders; use the Services line for guides and FAQ rows.
 - **Field:** Slightly lighter quote inputs and textareas.
 
 ## Typography
 
 The bundled display face is Barlow Condensed, registered in CSS as `Barlow`. The body face is DM Sans, registered as `DM`. Keep these local aliases when using the supplied font files.
 
-Use heavy uppercase display type for headings. DM Sans carries body text, form labels and navigation. Frontmatter records the main desktop roles; these are page instances rather than a universal type scale.
+Use heavy uppercase display type for headings. DM Sans carries body text, form labels and navigation. Frontmatter records the main desktop roles; the Services slide uses a tighter scale for long-form reading.
 
 - **Homepage:** Main headings use the home display role. At widths up to (950px), the size becomes `clamp(61px, 9vw, 100px)`; at (720px), `clamp(54px, 13vw, 76px)`. Process headings have their own smaller clamps. Supporting copy runs from (17px) to (21px), with a (36ch) maximum, then becomes (16px) on phones.
-- **Services:** The page title uses the Services display role, capped at (6rem). Chapter headings use the Services headline role; FAQ group headings use (1.65rem) with (1.05) line height. General paragraphs allow up to (68ch), with shorter hero and chapter measures.
+- **Services & FAQs:** The title uses the Services display role. Cards and section headings use the Services headline role. Smaller cards, pickup-day labels and FAQ groups use the Services subheading role.
 - **Quote drawer:** Uppercase heading uses `clamp(56px, 8vw, 76px)` at (.91) line height. Labels use the shared label role; fields remain (16px).
 
 ## Layout
 
-**Homepage:** Fit the outer page to the viewport with header, horizontal rail and pager. Five full-width panels snap horizontally: Crew, Pickups, How it works, Area and Quote. Keep the outer page free of vertical scrolling; individual panels can scroll when content exceeds their height. Desktop panels use two columns within a (1570px) maximum. The process panel uses one column with three steps across. At (720px), stack the content and compact the artwork and pager. Edge spacing becomes (28px) at (950px), then (18px) at (720px); the smallest pager and brand adjustments start at (370px).
+**Homepage:** Fit the outer page to the viewport with header, horizontal rail and pager. Six full-width slides snap horizontally in this order: Crew, Pickups, Services & FAQs, How it works, Area and Quote. Keep the outer page free of vertical scrolling; individual panels can scroll when content exceeds their height. Desktop panels use two columns within a (1570px) maximum. The process panel uses one column with three steps across. At (720px), stack the content and compact the artwork and pager. Edge spacing becomes (28px) at (950px), then (18px) at (720px); the smallest pager and brand adjustments start at (370px).
 
-**Services:** Use ordinary vertical page scrolling and a sticky header. Center content within (1160px). Alternate image and copy proportions, then use a three-column illustrated service grid, a gold pickup-day chapter and two columns of FAQ groups. At (720px), stack the hero, split chapters and FAQ groups; each small service card keeps its image and caption side by side. The desktop chapter proportions and mobile artwork crops belong to this page.
+**Services & FAQs:** Scroll vertically within the slide and keep the shared header and pager in place. Center the guide within (1220px). Use two feature callouts, three smaller job callouts, one pickup-day section and two FAQ columns. On phones, use one column for the guide and shorter pager labels. Keep the art beside its own copy where it fits.
 
 **Shared drawer:** Anchor the native dialog to the right at `min(570px, 100%)`, with viewport height and internal vertical scrolling. Keep the ZIP and preferred-day row in two columns, allow actions to wrap and return focus to the opening control on close.
 
@@ -138,7 +133,7 @@ Portrait entry and exit motion applies only when reduced motion is not requested
 
 ## Shapes
 
-Keep controls, fields, tags, cards and the drawer square. Use thin single-pixel dividers and borders. The circular homepage brand badge is a local exception. On the homepage, the two crew portraits rest at opposing (5deg) tilts with vertical offsets; the Services hero scene has a (−3deg) tilt and a sand frame. Keep service scene crops and aspect ratios specific to their illustrations; the revised washer scene displays as a full image.
+Keep controls, fields, tags, cards and the drawer square. Use thin single-pixel dividers and borders. The circular homepage brand badge is a local exception. On the homepage, the two crew portraits rest at opposing (5deg) tilts with vertical offsets; the service cutouts extend slightly above and to the right of their cards. Use the transparent outline to guide text flow.
 
 ## Components
 
@@ -146,15 +141,15 @@ Keep controls, fields, tags, cards and the drawer square. Use thin single-pixel 
 
 Homepage tickets use gold with ink text or rust with cream text, a thin border and a hard offset shadow. Hover lightens gold or darkens rust; press shifts the ticket by (1px) and reduces its shadow. Reduced motion removes the shift. Homepage tickets have a (46px) minimum height.
 
-Services quote buttons use gold, square corners and a (44px) minimum height. Hover changes the fill and reveals the border; phone padding is tighter. The shared drawer’s email action inherits the page’s ticket style: rust and shadow on the homepage, pine with (12px 18px) padding and a (48px) minimum height on Services. Keep these instance differences explicit.
+The Services slide uses the shared ticket styles and quote drawer.
 
 ### Navigation
 
-The homepage uses previous/next arrow buttons and labeled panel buttons. Gold fill marks the current panel; disabled arrows fade. Hide panel numbers below (950px), keeping the labels. The Services header uses text links and a gold quote button, with wrapping on narrow screens. The footer and hero offer a return to Pickups.
+The homepage uses previous/next arrow buttons and labeled panel buttons. Gold fill marks the current panel; disabled arrows fade. Hide panel numbers below (950px), keeping the labels. The Services slide includes a jump to FAQs and a link back to Pickups. Phone labels shorten to FAQs and Process while accessible names describe both sections.
 
 ### Tags and containers
 
-Services item tags are static bordered labels. Callouts use a thin border, cream fill and compact inset copy; the pickup-day chapter places them on gold. Small illustrated cards use a border and bold caption. They have no action states.
+Service callouts use cream or sand, a thin border and compact copy. Crew and objects reach beyond the edge with a soft shadow. A native CSS shape around each cutout keeps copy alongside the silhouette. A warm gold section groups the pickup-day instructions.
 
 ### FAQ disclosure
 
@@ -166,7 +161,7 @@ Use native inputs and textareas with square corners, a thin muted border and a l
 
 ### Illustrations
 
-Preserve the approved crew avatars, textured scene sheet and revised washer scene. Crop art differently for the homepage’s limited panel space and the Services chapters. Generated scenes illustrate service examples; they do not establish a completed-job portfolio.
+Preserve the approved crew avatars, textured scene sheet and revised washer scene. Use transparent action art on the Services slide. Generated scenes illustrate service examples; they do not establish a completed-job portfolio.
 
 ## Do's and Don'ts
 
@@ -174,12 +169,10 @@ Preserve the approved crew avatars, textured scene sheet and revised washer scen
 
 - Do keep the approved crew avatars and illustrated service examples.
 - Do vary image crops to suit the scene and available space.
-- Do preserve the separate homepage and Services layout models.
+- Do keep long-form reading inside the Services slide.
 - Do keep quote fields readable at phone sizes and preserve visible keyboard focus.
 
 ### Don't:
 
-- Don’t apply the homepage’s horizontal rail to the Services page.
 - Don’t replace the square controls with rounded pills.
 - Don’t present generated illustrations as photographs of completed jobs.
-- Don’t turn the static service tags into filters without a product requirement.
