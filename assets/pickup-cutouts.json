@@ -1,0 +1,10 @@
+{
+  "tool": "Built-in ImageGen",
+  "reference": "services.webp",
+  "outputs": [
+    "pickup-couch.webp",
+    "pickup-chair.webp",
+    "pickup-box.webp"
+  ],
+  "prompt": "Create one true transparent PNG asset sheet for 2 Loons Pickup. The attached design mockup is only the source for the original objects and vintage scanned screen-print illustration style. Create the same three items as fully isolated, independently crop-able entire objects, in the same understated rustic palette. Use a square sheet and 3 isolated placements with reliable broad transparent gutters. The COMPLETE large rust-orange three-cushion couch occupies the top half, centered horizontally, with both arms, all outward edges, full couch base, and feet visible with transparent margin around every edge. A COMPLETE olive green wood-framed armchair in the lower-left quadrant. One COMPLETE ochre moving box in the lower-right quadrant. Nothing crosses the 50% horizontal split or the bottom half's center line. All three should be three-quarter front facing, low perspective. No people, no website mockup, no letters, no line, no texture behind the objects, no floor, no room, no baked rectangle or broad drop shadows. True transparent RGBA alpha outside every object. Preserve the moss, rust and mustard grain inside the cutouts. Crisp high-quality complete silhouettes suitable for CSS drop shadows; nothing cropped by canvas or cell edge."
+}

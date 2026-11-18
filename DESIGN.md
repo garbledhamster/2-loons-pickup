@@ -145,7 +145,7 @@ The Services slide uses the shared ticket styles and quote drawer.
 
 ### Navigation
 
-The homepage uses previous/next arrow buttons and labeled panel buttons. Gold fill marks the current panel; disabled arrows fade. Hide panel numbers below (950px), keeping the labels. The Services slide includes a jump to FAQs and a link back to Pickups. Phones use Process as the short label for How it works. At widths up to (450px), keep all seven labeled buttons visible. Swipe or tap a label to change slides.
+The homepage uses previous/next arrow buttons and labeled panel buttons. Gold fill marks the current panel; disabled arrows fade. Hide panel numbers below (950px), keeping the labels. The Services slide includes a jump to FAQs and a link back to Pickups. Phones use Process as the short label for How it works. At widths up to (450px), keep all seven labeled buttons visible. Swipe or tap a label to change slides. At the end of a scrollable slide, continued wheel or trackpad input, or a new vertical swipe, moves to the next slide.
 
 ### Tags and containers
 
@@ -161,7 +161,7 @@ Use native inputs and textareas with square corners, a thin muted border and a l
 
 ### Illustrations
 
-Preserve the approved crew avatars, textured scene sheet and revised washer scene. Use transparent action art on the Services slide. Generated scenes illustrate service examples; they do not establish a completed-job portfolio.
+Preserve the approved crew avatars, textured scene sheet and revised washer scene. On Pickups, layer the full couch, chair and moving box as transparent cutouts with individual soft shadows. Use transparent action art on the Services slide. Generated scenes illustrate service examples; they do not establish a completed-job portfolio.
 
 ## Do's and Don'ts
 

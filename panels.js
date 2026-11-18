@@ -10,6 +10,9 @@
   let destination = null;
   let frame = 0;
   let lastWheelMove = -Infinity;
+  let lastBoundaryWheel = -Infinity;
+  let boundaryWheelDistance = 0;
+  let touchStart = null;
 
   function select(index) {
     if (index === activeIndex) return;
@@ -18,6 +21,7 @@
       rail.focus({ preventScroll: true });
     }
     activeIndex = index;
+    boundaryWheelDistance = 0;
     for (let i = 0; i < panels.length; i++) {
       const active = i === index;
       const panel = panels[i];
@@ -51,6 +55,10 @@
 
   function leftFor(index) {
     return index * rail.clientWidth;
+  }
+
+  function canScroll(panel, down) {
+    return down ? panel.scrollHeight - panel.clientHeight - panel.scrollTop > 2 : panel.scrollTop > 2;
   }
 
   function moveTo(index, behavior = reducedMotion.matches ? 'instant' : 'smooth') {
@@ -88,26 +96,60 @@
   }, { passive: true });
 
   // Let a finger or trackpad take over a programmatic scroll.
-  rail.addEventListener('touchstart', () => { destination = null; }, { passive: true });
+  rail.addEventListener('touchstart', event => {
+    destination = null;
+    touchStart = null;
+    if (event.touches.length !== 1) return;
+    const touch = event.touches[0];
+    const panel = panels[activeIndex];
+    // A swipe that starts within scrollable content stays with the browser.
+    touchStart = {
+      id: touch.identifier, x: touch.clientX, y: touch.clientY, index: activeIndex,
+      atTop: !canScroll(panel, false), atBottom: !canScroll(panel, true)
+    };
+  }, { passive: true });
+  rail.addEventListener('touchcancel', () => { touchStart = null; }, { passive: true });
+  rail.addEventListener('touchend', event => {
+    const start = touchStart;
+    touchStart = null;
+    if (!start || start.index !== activeIndex) return;
+    const touch = Array.from(event.changedTouches).find(point => point.identifier === start.id);
+    if (!touch) return;
+    const vertical = start.y - touch.clientY;
+    const horizontal = start.x - touch.clientX;
+    if (Math.abs(vertical) < 44 || Math.abs(vertical) <= Math.abs(horizontal) * 1.25) return;
+    if (vertical > 0 && start.atBottom && activeIndex < panels.length - 1) moveTo(activeIndex + 1);
+    if (vertical < 0 && start.atTop && activeIndex > 0) moveTo(activeIndex - 1);
+  }, { passive: true });
   rail.addEventListener('wheel', event => {
     if (event.ctrlKey || event.metaKey) return;
     if (event.shiftKey || Math.abs(event.deltaX) >= Math.abs(event.deltaY)) {
       destination = null;
+      boundaryWheelDistance = 0;
       return;
     }
 
     const panel = panels[activeIndex];
     const down = event.deltaY > 0;
-    const canScroll = down
-      ? panel.scrollHeight - panel.clientHeight - panel.scrollTop > 2
-      : panel.scrollTop > 2;
-    if (canScroll || Math.abs(event.deltaY) < 12) return;
+    if (canScroll(panel, down)) {
+      boundaryWheelDistance = 0;
+      return;
+    }
 
     const target = clamp(activeIndex + (down ? 1 : -1));
     if (target === activeIndex) return;
     event.preventDefault();
     const now = performance.now();
     if (destination !== null || now - lastWheelMove < 520) return;
+    // A trackpad can deliver one gesture as several small wheel events.
+    const delta = event.deltaY * (event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? panel.clientHeight : 1);
+    if (now - lastBoundaryWheel > 180 || Math.sign(boundaryWheelDistance) !== Math.sign(delta)) {
+      boundaryWheelDistance = 0;
+    }
+    lastBoundaryWheel = now;
+    boundaryWheelDistance += delta;
+    if (Math.abs(boundaryWheelDistance) < 18) return;
+    boundaryWheelDistance = 0;
     lastWheelMove = now;
     moveTo(target);
   }, { passive: false });
