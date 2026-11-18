@@ -645,9 +645,20 @@ h1 span, .accent {
     gap: 4px;
     padding-inline: 6px;
   }
+}
 
-  .arrow {
-    width: 32px;
+@media (max-width: 450px) {
+  .pager .arrow {
+    display: none;
+  }
+
+  .panel-buttons {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .panel-button {
+    min-height: 44px;
   }
 }
 

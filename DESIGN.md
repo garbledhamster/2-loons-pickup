@@ -83,7 +83,7 @@ Use the approved pine, cream, gold and rust palette with condensed headings, squ
 - Condensed uppercase display type with readable DM Sans body copy.
 - Thin borders, paper-colored surfaces and small offset button shadows on the homepage.
 - Varied illustration crops and tilted crew artwork.
-- Six horizontal homepage slides with a contained Services & FAQs guide and a shared quote drawer.
+- Seven horizontal homepage slides with dedicated Services and FAQ slides and a shared quote drawer.
 
 ## Colors
 
@@ -101,7 +101,7 @@ Use dark pine and warm paper for large surfaces, with gold and rust for emphasis
 
 ### Neutral
 
-- **Cream:** Light slides, including Services & FAQs, and the quote drawer.
+- **Cream:** Light slides, including Services and FAQs, and the quote drawer.
 - **Ink:** Light-slide text, ticket borders and drawer text.
 - **Sand:** Crew portrait frames, homepage brand badge and the stairs card.
 - **Line / Services line:** Thin dividers and borders; use the Services line for guides and FAQ rows.
@@ -114,14 +114,14 @@ The bundled display face is Barlow Condensed, registered in CSS as `Barlow`. The
 Use heavy uppercase display type for headings. DM Sans carries body text, form labels and navigation. Frontmatter records the main desktop roles; the Services slide uses a tighter scale for long-form reading.
 
 - **Homepage:** Main headings use the home display role. At widths up to (950px), the size becomes `clamp(61px, 9vw, 100px)`; at (720px), `clamp(54px, 13vw, 76px)`. Process headings have their own smaller clamps. Supporting copy runs from (17px) to (21px), with a (36ch) maximum, then becomes (16px) on phones.
-- **Services & FAQs:** The title uses the Services display role. Cards and section headings use the Services headline role. Smaller cards, pickup-day labels and FAQ groups use the Services subheading role.
+- **Services and FAQs:** Both titles use the Services display role. Cards and section headings use the Services headline role. Smaller cards, pickup-day labels and FAQ groups use the Services subheading role.
 - **Quote drawer:** Uppercase heading uses `clamp(56px, 8vw, 76px)` at (.91) line height. Labels use the shared label role; fields remain (16px).
 
 ## Layout
 
-**Homepage:** Fit the outer page to the viewport with header, horizontal rail and pager. Six full-width slides snap horizontally in this order: Crew, Pickups, Services & FAQs, How it works, Area and Quote. Keep the outer page free of vertical scrolling; individual panels can scroll when content exceeds their height. Desktop panels use two columns within a (1570px) maximum. The process panel uses one column with three steps across. At (720px), stack the content and compact the artwork and pager. Edge spacing becomes (28px) at (950px), then (18px) at (720px); the smallest pager and brand adjustments start at (370px).
+**Homepage:** Fit the outer page to the viewport with header, horizontal rail and pager. Seven full-width slides snap horizontally in this order: Crew, Pickups, Services, FAQs, How it works, Area and Quote. Keep the outer page free of vertical scrolling; individual panels can scroll when content exceeds their height. Desktop panels use two columns within a (1570px) maximum. The process panel uses one column with three steps across. At (720px), stack the content and compact the artwork and pager. Edge spacing becomes (28px) at (950px), then (18px) at (720px); the smallest pager and brand adjustments start at (370px).
 
-**Services & FAQs:** Scroll vertically within the slide and keep the shared header and pager in place. Center the guide within (1220px). Use two feature callouts, three smaller job callouts, one pickup-day section and two FAQ columns. On phones, use one column for the guide and shorter pager labels. Keep the art beside its own copy where it fits.
+**Services and FAQs:** Scroll within each slide and keep the shared header and pager in place. Center the content within (1220px). Services contains two feature callouts, three smaller job callouts and the pickup-day section. FAQs presents the questions in two columns and opens with a quote button. On phones, use one column on both slides. Keep service art beside its copy where it fits.
 
 **Shared drawer:** Anchor the native dialog to the right at `min(570px, 100%)`, with viewport height and internal vertical scrolling. Keep the ZIP and preferred-day row in two columns, allow actions to wrap and return focus to the opening control on close.
 
@@ -145,7 +145,7 @@ The Services slide uses the shared ticket styles and quote drawer.
 
 ### Navigation
 
-The homepage uses previous/next arrow buttons and labeled panel buttons. Gold fill marks the current panel; disabled arrows fade. Hide panel numbers below (950px), keeping the labels. The Services slide includes a jump to FAQs and a link back to Pickups. Phone labels shorten to FAQs and Process while accessible names describe both sections.
+The homepage uses previous/next arrow buttons and labeled panel buttons. Gold fill marks the current panel; disabled arrows fade. Hide panel numbers below (950px), keeping the labels. The Services slide includes a jump to FAQs and a link back to Pickups. Phones use Process as the short label for How it works. At widths up to (450px), keep all seven labeled buttons visible. Swipe or tap a label to change slides.
 
 ### Tags and containers
 
