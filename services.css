@@ -37,6 +37,61 @@
   line-height: 1.5;
 }
 
+.guide-scene {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
+  grid-template-areas: "art title" "art copy";
+  grid-template-rows: 1fr 1fr;
+  gap: 18px clamp(26px, 5vw, 72px);
+  margin-bottom: clamp(24px, 4vw, 52px);
+}
+
+.guide-scene h3 {
+  grid-area: title;
+  align-self: end;
+  font-size: clamp(36px, 4.2vw, 64px);
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
+.guide-scene figure {
+  grid-area: art;
+}
+
+.guide-scene img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.guide-scene figcaption {
+  margin-top: 8px;
+  font-weight: 700;
+}
+
+.guide-scene figcaption::before {
+  display: inline-block;
+  width: 24px;
+  margin-right: 9px;
+  border-top: 3px solid var(--rust);
+  vertical-align: middle;
+  content: "";
+}
+
+.guide-scene-copy {
+  grid-area: copy;
+}
+
+.guide-scene-copy > p:first-child {
+  max-width: 37ch;
+  margin-bottom: 16px;
+}
+
+.guide-scene-note {
+  margin-top: 6px;
+  font-size: 14px;
+}
+
 .guide-card-grid, .guide-day-grid, .guide-faqs .questions {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -281,6 +336,39 @@
 @media (max-width: 720px) {
   .guide-intro, .guide-card-grid, .guide-faqs .questions {
     grid-template-columns: minmax(0, 1fr);
+  }
+
+  #service-guide .guide-intro {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 8px 12px;
+    padding-bottom: 14px;
+    margin-bottom: 18px;
+  }
+
+  #service-guide .guide-intro h2 {
+    font-size: clamp(36px, 11.6vw, 50px);
+  }
+
+  #service-guide .guide-intro > div {
+    display: contents;
+  }
+
+  #service-guide .guide-intro .ticket {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  #service-guide .guide-intro p {
+    grid-column: 1 / -1;
+    margin-bottom: 0;
+  }
+
+  .guide-scene {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "title" "art" "copy";
+    grid-template-rows: auto;
+    gap: 12px;
   }
 
   .guide-card-grid {
